@@ -210,7 +210,7 @@ async def delete_links(message: types.Message):
     admins_list = [admin.user.id for admin in await bot.get_chat_administrators(chat_id=message.chat.id)]
     if message.from_user.id not in admins_list:
         
-        for i in ('@', 'было в', 'спизженно из', 'видел в', 'уже было', 'повтор', 'сеть', 'сетка', 'сет', 'укра'):
+        for i in ('@', 'было в', 'спизженно из', 'видел в', 'уже было', 'повтор', 'сеть', 'сетка', 'сет', 'укра', 'вдохновл', 'амаж'):
             if i in message.text.lower():
                 await bot.delete_message(message.chat.id, message.message_id)
 
